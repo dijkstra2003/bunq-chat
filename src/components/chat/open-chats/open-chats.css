@@ -1,0 +1,13 @@
+.open-chats {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: #dbdbdb;
+}
+
+.username {
+    padding: 30px;
+    background-color: #FCFCFC;
+}

@@ -14,7 +14,6 @@ class Login extends React.Component {
     }
     
     componentDidMount() {
-        console.log(this.state.isLoading);
         fetch("http://assignment.bunq.com/users")
         .then(res => res.json())
         .then(
@@ -23,7 +22,6 @@ class Login extends React.Component {
                     isLoading: false,
                     users: result
                 });
-                console.log(this.state.isLoading)
             },
             (error) => {
                 this.setState({
@@ -32,6 +30,11 @@ class Login extends React.Component {
                 })
             }
         )
+    }
+
+    onChange(userId) {
+        console.log(userId);
+        sessionStorage.setItem('userId', userId);
     }
     
     render() {
@@ -45,8 +48,8 @@ class Login extends React.Component {
                             choose a user
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            {this.state.users.map((value, index) => {
-                                return <Dropdown.Item key={index}>{value.name}</Dropdown.Item>
+                            {this.state.users.map((value) => {
+                                return <Dropdown.Item onSelect={this.onChange} eventKey={value.id} key={value.id}>{value.name}</Dropdown.Item>
                             })}
                         </Dropdown.Menu>
                     </Dropdown>

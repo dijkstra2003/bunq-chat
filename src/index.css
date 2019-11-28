@@ -18,8 +18,8 @@ body, html {
 
 body {
   height: auto;
-  min-height: 100vh;
   background-image: url(assets/bunq-background.svg);
   background-size: 100%;
+  color: #1f1f1f !important;
 }
 

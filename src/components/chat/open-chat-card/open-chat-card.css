@@ -1,0 +1,11 @@
+.open-chat-card {
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    padding: 25px;
+    margin-top: 5px;
+    background-color: #FCFCFC;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
