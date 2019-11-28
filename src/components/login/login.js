@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './login.css'
-import logo from '../../assets/vectorpaint.svg';
+import logo from '../../assets/bunq-logo.svg';
 
 class Login extends React.Component {
     render() {
