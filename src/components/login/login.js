@@ -2,6 +2,7 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './login.css'
 import logo from '../../assets/bunq-logo.svg';
+import {withRouter} from 'react-router-dom';
 
 class Login extends React.Component {
     constructor(props) {
@@ -11,6 +12,8 @@ class Login extends React.Component {
             isLoading: true,
             users: []
         }
+
+        this.onChange = this.onChange.bind(this);
     }
     
     componentDidMount() {
@@ -33,8 +36,9 @@ class Login extends React.Component {
     }
 
     onChange(userId) {
-        console.log(userId);
         sessionStorage.setItem('userId', userId);
+        this.props.history.push('/chat');
+
     }
     
     render() {
@@ -60,4 +64,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);
