@@ -3,9 +3,13 @@
     width: 100%;
     text-align: left;
     padding: 25px;
-    margin-top: 5px;
     background-color: #FCFCFC;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.open-chat-card:hover {
+    background-color: #F4F4F4;
 }

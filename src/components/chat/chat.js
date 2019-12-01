@@ -15,6 +15,10 @@ class Chat extends React.Component {
     }
 
     componentDidMount() {
+        this.fetchUser();        
+    }
+
+    fetchUser() {
         fetch("http://assignment.bunq.com/user/" + sessionStorage.getItem('userId'))
         .then(res => res.json())
         .then(
@@ -30,7 +34,7 @@ class Chat extends React.Component {
                     error: error
                 })
             }
-        )
+        );
     }
 
     render() {

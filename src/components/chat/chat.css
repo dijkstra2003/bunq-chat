@@ -3,4 +3,5 @@
     margin-top: 1vh;
     background-color: #F4F4F4;
     bottom: 0;
+    display: flex;
 }
