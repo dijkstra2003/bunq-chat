@@ -42,8 +42,8 @@ class OpenChats extends React.Component {
                     <h2>{this.props.user.name}</h2>
                 </div>
                 {!this.state.isLoading && (
-                    this.state.conversations.map((conversation) => {
-                        return <OpenChatCard conversation={conversation.conversation} key={conversation.conversation.id}/>
+                    this.state.conversations.map((conversation, key) => {
+                        return <OpenChatCard conversation={conversation.conversation} key={key}/>
                     })
                 )}
             </div>

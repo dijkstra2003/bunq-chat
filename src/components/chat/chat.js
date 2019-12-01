@@ -14,6 +14,10 @@ class Chat extends React.Component {
 
     }
 
+    handleOpenChatClick = (conversation) => {
+        this.setState({conversation: conversation})
+    }
+
     componentDidMount() {
         this.fetchUser();        
     }
@@ -42,7 +46,7 @@ class Chat extends React.Component {
             !this.state.isLoading && (
                 <div className="chat-wrapper">
                     <OpenChats user={this.state.user} />
-                    <ActiveChat />
+                    <ActiveChat/>
                 </div>
             )
         )
