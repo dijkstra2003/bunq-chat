@@ -8,12 +8,12 @@ class OpenChatCard extends React.Component {
     }
 
     onClick() {
-        var oldId = this.props.conversation.id;
-
         sessionStorage.setItem('conversationId', this.props.conversation.id);
 
+        var oldConversationId = this.props.conversation.id;
+
         return setTimeout(function() {
-            if(sessionStorage.getItem('conversationId') === oldId) {
+            if(sessionStorage.getItem('conversationId') === oldConversationId) {
                 window.dispatchEvent(new Event('refresh'));
             }
         }, 50);

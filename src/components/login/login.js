@@ -17,6 +17,10 @@ class Login extends React.Component {
     }
     
     componentDidMount() {
+        this.fetchUsers();
+    }
+
+    fetchUsers() {
         fetch("http://assignment.bunq.com/users")
         .then(res => res.json())
         .then(
@@ -32,7 +36,7 @@ class Login extends React.Component {
                     error: error
                 })
             }
-        )
+        );
     }
 
     onChange(userId) {

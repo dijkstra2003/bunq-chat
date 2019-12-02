@@ -6,11 +6,6 @@ html {
   margin-top: 0 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 body, html {
   height: 100%;
   position: relative;
