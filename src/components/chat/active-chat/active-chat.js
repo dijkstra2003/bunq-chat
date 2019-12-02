@@ -63,9 +63,11 @@ class ActiveChat extends React.Component {
                 senderId: sessionStorage.getItem('userId')
             })
         })
-        .then(res => res.json())
         .then(
             this.fetchMessages()
+        )
+        .then(
+            this.setState({inputValue: ''})
         );
     }
 
@@ -88,7 +90,7 @@ class ActiveChat extends React.Component {
                 </div>
                 <div className="input-container">
                     <form onSubmit={this.sendMessage}>
-                        <input type="text" placeholder="send a message..." onChange={this.onInputChange}></input>
+                        <input type="text" placeholder="send a message..." onChange={this.onInputChange} value={this.state.inputValue}></input>
                         <Button variant="secondary" onClick={this.sendMessage}>send</Button>
                     </form>
                 </div>
